@@ -1,11 +1,10 @@
 'use client';
 
-import { useFormState } from 'react-dom';
+import { useActionState, useRef, useEffect } from 'react';
 import { submitLeave } from './actions';
-import { useRef, useEffect } from 'react';
 
 export default function LeaveForm() {
-  const [state, formAction] = useFormState(submitLeave, null);
+  const [state, formAction] = useActionState(submitLeave, null);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -32,6 +31,7 @@ export default function LeaveForm() {
             type="text"
             required
             className="w-full border border-gray-300 p-2 rounded mt-1 text-gray-900"
+            placeholder="e.g. John Doe"
           />
         </div>
 
@@ -62,6 +62,7 @@ export default function LeaveForm() {
             rows={3}
             required
             className="w-full border border-gray-300 p-2 rounded mt-1 text-gray-900"
+            placeholder="State your reason..."
           />
         </div>
 
