@@ -38,7 +38,7 @@ export default function LeaveForm() {
         <div>
           <label className="block text-sm font-medium text-gray-700">Start Date</label>
           <input
-            name="startDate"
+            name="start_date"
             type="date"
             required
             className="w-full border border-gray-300 p-2 rounded mt-1 text-gray-900"
@@ -48,7 +48,7 @@ export default function LeaveForm() {
         <div>
           <label className="block text-sm font-medium text-gray-700">End Date</label>
           <input
-            name="endDate"
+            name="end_date"
             type="date"
             required
             className="w-full border border-gray-300 p-2 rounded mt-1 text-gray-900"

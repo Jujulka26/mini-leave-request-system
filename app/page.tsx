@@ -20,7 +20,7 @@ export default async function Home({
     <div className="min-h-screen bg-gray-50 p-6 md:p-12">
       <header className="max-w-6xl mx-auto mb-8">
         <h1 className="text-3xl font-extrabold text-gray-900">
-          NaiBnB Mini Leave Request System
+          Mini Leave Request System
         </h1>
       </header>
 
@@ -71,7 +71,7 @@ export default async function Home({
                     </span>
                   </div>
                   <p className="text-xs text-gray-500 mt-1">
-                    📅 {req.startDate} to {req.endDate}
+                    📅 {req.start_date} to {req.end_date}
                   </p>
                   <p className="text-sm text-gray-700 mt-2 bg-gray-50 p-2 rounded">
                     {req.reason}
