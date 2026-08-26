@@ -22,3 +22,6 @@ Next.js application for managing employee leave requests. Features server-side v
 - **End-to-end functionality**: Complete flow from submission to approval/rejection. Data persists in `data.json`.
 - **Validation**: Server-side logic ensures all fields exist and `end_date >= start_date`.
 - **Extra**: Tailwind CSS UI polish and status filter (All, Pending, Approved, Rejected).
+
+## Screenshot
+![Mini Leave Request System](screenshot.png)
