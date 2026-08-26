@@ -2,13 +2,14 @@ import { getRequests } from '@/lib/db';
 import { changeStatus } from './actions';
 import LeaveForm from './leaveform';
 
-export default function Home({
+export default async function Home({
   searchParams,
 }: {
-  searchParams: { filter?: string };
+  searchParams: Promise<{ filter?: string }>;
 }) {
   const allRequests = getRequests();
-  const filter = searchParams.filter || 'All';
+  const params = await searchParams;
+  const filter = params.filter || 'All';
 
   const filteredRequests =
     filter === 'All'
