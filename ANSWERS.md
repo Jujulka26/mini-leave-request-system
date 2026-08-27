@@ -1,16 +1,16 @@
 # Scenario Questions
 
 **S1. Overtime Claims module architecture**
-*   **Database Tables:** `users` (id, role, name), `overtime_claims` (id, user_id, date, total_hours, reason, status).
-*   **Backend Endpoints:** `POST /api/claims` (submit claim), `GET /api/claims` (list claims), `PATCH /api/claims/[id]` (update status).
-*   **Frontend Pages:** `Claim Form` (for staff submission), `My Claims` (for staff to see their history), `Manager Dashboard` (to view all pending claims and approve/reject).
-*   **Permissions:** Staff can only create and view their own claims. Managers can view all claims and update the status.
+*   **Database Tables:** `users` (id, role, name, manager_id), `overtime_claims` (id, user_id, date, total_hours, reason, status, approved_by, approved_at).
+*   **Backend Endpoints:** `POST /api/claims` (submit claim), `GET /api/claims` (list claims), `GET /api/claims/[id]` (view claim details), `PATCH /api/claims/[id]` (update claim status).
+*   **Frontend Pages:** `Claim Form` (staff submit overtime claims), `My Claims` (staff view their claim history and status), `Manager Dashboard` (managers view pending claims and approve or reject them).
+*   **Permissions:** Staff can create and view only their own claims. Managers can view relevant staff claims and approve or reject them by updating the claim status.
 
 **S2. Troubleshooting stuck "Pending" status**
-1.  **Check the Database:** Look at the actual database record to see if the status updated on the backend. If it did, the bug is on the frontend.
-2.  **Check the Network Tab:** Open the browser's developer tools to see if the approve API call returned a 200 OK or failed silently with an error.
-3.  **Check the Frontend Cache:** See if the UI is just showing stale data and hasn't properly refreshed after the successful backend update.
-4.  **Check Backend Logic:** Ensure the backend function is actually saving the updated status before returning the success response.
+1.  **Check the Approve API Request:** Use the browser's Network tab to confirm the approve request is sent with the correct leave request ID and status, and check whether it succeeds or returns an error.
+2.  **Check the Backend Logic:** Verify that the backend receives the request and correctly updates the leave request status.
+3.  **Check the Database:** Confirm that the actual database record has changed from Pending to Approved.
+4.  **Check the Frontend Refresh/State:** If the database is updated correctly, investigate whether the frontend is displaying stale cached data or failing to update its state after refreshing the list.
 
 **S3. API key leak remediation**
 1.  **Report Immediately:** Privately message the senior developer and the team lead right away so they know the key is exposed. 
@@ -26,8 +26,8 @@
     I am strongest in Flutter, Java, Spring Boot, PostgreSQL, and PHP. During this internship, I really want to strengthen my Next.js skills and learn more about DevOps tools like Docker, Kubernetes, and Terraform.
 
 *   **Link to one past project you're proud of — what was hard, what did you learn?**
-    [Link to Pawpal Repo] 
+    [Pawpal Repo](https://github.com/Jujulka26/A251_pawpal)
     I built Pawpal, a mobile app for pet adoption and donations. The hardest part was integrating the Billplz payment gateway and handling user profile images. Because image files are large, I learned to process the uploads asynchronously to prevent the app from freezing. This challenge also taught me the best practice of storing image URLs in the database rather than the heavy files themselves. Overall, it greatly improved my understanding of external APIs and performance optimization.
 
 *   **Minimum 10-week internship — confirmed? Preferred start date?**
-    Yes, confirmed. My preferred start date is September 2026.
+    Yes, confirmed. My preferred start date is 21 September 2026.

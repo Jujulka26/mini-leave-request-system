@@ -1,10 +1,26 @@
 [
   {
-    "id": "1787734624506",
-    "name": "Test",
-    "start_date": "2026-08-26",
-    "end_date": "2026-08-27",
-    "reason": "Wanted to leave.",
+    "id": "1",
+    "name": "Nurul Aisyah",
+    "start_date": "2026-09-14",
+    "end_date": "2026-09-18",
+    "reason": "Annual leave for a family trip to Penang.",
     "status": "Pending"
+  },
+  {
+    "id": "2",
+    "name": "Daniel Tan",
+    "start_date": "2026-09-02",
+    "end_date": "2026-09-02",
+    "reason": "Medical appointment with a specialist in the morning.",
+    "status": "Approved"
+  },
+  {
+    "id": "3",
+    "name": "Kavitha Raman",
+    "start_date": "2026-08-31",
+    "end_date": "2026-09-04",
+    "reason": "Personal leave to attend a relative's wedding.",
+    "status": "Rejected"
   }
 ]
