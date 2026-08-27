@@ -13,10 +13,10 @@
 4.  **Check the Frontend Refresh/State:** If the database is updated correctly, investigate whether the frontend is displaying stale cached data or failing to update its state after refreshing the list.
 
 **S3. API key leak remediation**
-1.  **Report Immediately:** Privately message the senior developer and the team lead right away so they know the key is exposed. 
-2.  **Revoke the Key:** The team needs to immediately log into the provider's dashboard to revoke the old key and generate a new one.
-3.  **Update .gitignore:** I would quickly push a commit to add `.env` to the `.gitignore` file so no one else accidentally commits it.
-4.  **Clean Git History:** I would ask the senior how they want to handle removing the key from the Git history (e.g., using `git filter-repo`), since force-pushing a shared branch requires team coordination.
+1.  **Revoke the Key First:** It has been public for two days, so treat it as compromised. Revoke it in the provider's dashboard and issue a replacement immediately, or escalate to whoever has access. Nothing else reduces the exposure.
+2.  **Tell the Senior and Team Lead:** Privately message them, explain what I found and did, and get the new key into the team's secret manager.
+3.  **Check for Misuse:** Review the provider's usage and audit logs for unauthorized calls or unexpected billing during the exposure window.
+4.  **Purge History and Prevent Recurrence:** Remove the file with `git filter-repo`, coordinating the force-push with the team, add `.env` to `.gitignore`, and enable secret scanning. Purging does not undo the leak, since forks and clones may still hold it, which is why rotation comes first.
 
 ---
 
