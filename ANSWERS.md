@@ -22,12 +22,12 @@
 
 # About You
 
-*   **Which part of the stack are you strongest in? Which do you want to learn?**
-    I am strongest in Flutter, Java, Spring Boot, PostgreSQL, and PHP. During this internship, I really want to strengthen my Next.js skills and learn more about DevOps tools like Docker, Kubernetes, and Terraform.
+*   **Which part of the stack are you strongest in? Which do you want to learn?**  
+    I am strongest in backend and full-stack development, particularly Java, Spring Boot, PostgreSQL, PHP, and Flutter. During this internship, I would like to further strengthen my Next.js and TypeScript skills while gaining more hands-on experience in modern web development.
 
-*   **Link to one past project you're proud of — what was hard, what did you learn?**
+*   **Link to one past project you're proud of — what was hard, what did you learn?**  
     [Pawpal Repo](https://github.com/Jujulka26/A251_pawpal)
-    I built Pawpal, a mobile app for pet adoption and donations. The hardest part was integrating the Billplz payment gateway and handling user profile images. Because image files are large, I learned to process the uploads asynchronously to prevent the app from freezing. This challenge also taught me the best practice of storing image URLs in the database rather than the heavy files themselves. Overall, it greatly improved my understanding of external APIs and performance optimization.
+    I built Pawpal, a mobile app for pet adoption and donations. The hardest part was integrating the Billplz payment gateway. It was my first time working with a third-party service I could not control, so I had to read the documentation carefully, test repeatedly with sandbox credentials, and handle the cases where a payment did not complete as expected. It taught me not to assume an external service will always respond the way I expect, and to confirm a payment's real status before updating anything in the app.
 
-*   **Minimum 10-week internship — confirmed? Preferred start date?**
+*   **Minimum 10-week internship — confirmed? Preferred start date?**  
     Yes, confirmed. My preferred start date is 21 September 2026.
